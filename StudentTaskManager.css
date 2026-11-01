@@ -1,0 +1,241 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f5f6fa;
+    margin:0;
+    padding:0;
+    color:#222;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width:60%;
+    padding:25px;
+}
+#heading{
+    text-align:center;
+    color:#5b3cc4;
+    font-size:32px;
+    margin-bottom: 30px;
+}
+#inputfield{
+    width:60%;
+    font-size: 16px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius: 8px;
+}
+#btn{
+    border-radius:8px;
+    background-color: #6c4be8;
+    color: white;
+    border:none;
+    padding:12px 20px;
+    font-size:16px;
+    cursor:pointer;
+    margin-left:8px;
+}
+#btn:hover{
+    background-color:#5032c4;
+}
+#alltasksbtn,#completebtn,#pendingbtn{
+    padding:12px 20px;
+    margin:15px 5px;
+    color:#5032c4;
+    background-color: #e8e2ff;
+    border-radius: 8px;
+    border:none;
+    font-size:15px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+#alltasksbtn:hover,#completebtn:hover,#pendingbtn:hover{
+    background-color:#6c4be8 ;
+    color:white;
+    transform:translateY(-3px);
+}
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+#taskList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style:none; 
+    padding:0px;
+    margin-top:20px;
+}
+#taskList li{
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    background-color:white;
+    padding:16px;
+    margin-bottom:12px;
+    border-radius:10px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 3px 8px rgba(0,0,0,0,0.05);
+}
+
+#taskList li button{
+    padding:7px 12px;
+    border-radius:6px;
+    font-weight: bold;
+    font-size:13px;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+    margin-left:10px;
+}
+#taskList li button:hover{
+    transform:translateY(-2px);
+    opacity:0.85;
+}
+#taskList li button.delete-btn{
+    background-color:#fee2e2 !important;
+    color:#dc2626 !important;
+    border:1px solid #fca5a5 !important;
+}
+#taskList li button.delete-btn:hover{
+    background-color:#dc2626;
+    color:white;
+}
+
+#taskList li button.edit-btn {
+    background-color: #ede9fe;
+    color: #6d28d9;
+    border: 1px solid #c4b5fd;
+}
+
+#taskList li button.edit-btn:hover {
+    background-color: #6d28d9;
+    color: white;
+}
+
+#taskList li button.complete-btn{
+    color:#15803d;
+    background-color:#dcfce7;
+    border:1px solid #86efac;
+}
+#taskList li button.complete-btn:hover{
+    background-color:#15803d;
+    color:white;
+}
+
+.summary-cards{
+    display:flex;
+    
+    gap:15px;
+    margin-top:70px;
+    margin-bottom: 20px;
+     flex-wrap:wrap;
+}
+.summary-cards p{
+     
+    background-color:white;
+    padding:16px 22px;
+    border-radius:10px;
+    border:1px solid #e5e7eb;
+    /* box-shadow:0 3pc 8px rgba(0,0,0,0.05); */
+    margin: 0;
+    font-weight: 600;
+
+}
+
+
+
+
+.summary-cards p {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#btn {
+    vertical-align: middle;
+}
+
+#inputfield {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container{
+        max-width:100%;
+        padding:20px 16px;
+        box-sizing:border-box;
+    }
+    #heading{
+        font-size:26px;
+    }
+    #inputbtn{
+        width:100%;
+        flex-direction:column;
+        gap:10px;
+    }
+    #inputfield {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #btn {
+        margin-left: 0;
+        width: 100%;
+    }
+    .summary-cards{
+        width:100%;
+        margin-top:35px;
+        flex-direction: column;
+    }
+    .summary-cards p{
+        box-sizing:border-box;
+        width:100%;
+    }
+    #filter{
+        flex-wrap:wrap;
+        gap:10px;
+        margin-top:30px;
+    }
+    #taskList{
+        width:100%;
+    }
+    #taskList li {
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+#filter{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+#inputbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#taskList li input{
+    padding:10px 12px;
+    border-radius:8px;
+    font-size:16px;
+    border:1px solid #8b5cf6;
+    width:180px;
+    outline: none;
+    box-sizing: border-box;
+
+}
